@@ -12,7 +12,7 @@ const Main = ({ children, title }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <Container maxW="container.md">
+      <Container maxW="container.lg">
         <NavBar />
         {children}
       </Container>

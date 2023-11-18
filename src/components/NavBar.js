@@ -1,4 +1,4 @@
-const { Box, Flex } = require("@chakra-ui/layout");
+import { HStack, Flex } from "@chakra-ui/layout";
 import { Button } from "@chakra-ui/button";
 import Link from "next/link";
 import ThemeToggleButton from "./ThemeToggleButton";
@@ -14,20 +14,18 @@ const LinkItem = ({ href, target, children, ...props }) => {
 const NavBar = () => {
   return (
     <Flex
-      as="nav"
-      pt="10px"
-      pb="10px"
-      display="flex"
+      as="header"
+      py="10px"
       justifyContent="space-between"
       alignItems="center"
     >
-      <Flex direction="row" gap="10px">
+      <HStack as="nav" spacing="10px">
         <LinkItem href="/">Home</LinkItem>
         <LinkItem href="/works">Works</LinkItem>
         <LinkItem href="https://github.com/oasi911/homepage" target="_blank">
           Source
         </LinkItem>
-      </Flex>
+      </HStack>
       <ThemeToggleButton />
     </Flex>
   );
