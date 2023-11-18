@@ -1,18 +1,19 @@
-const { Box, Link, Flex } = require("@chakra-ui/layout");
-import NextLink from "next/link";
+const { Box, Flex } = require("@chakra-ui/layout");
+import { Button } from "@chakra-ui/button";
+import Link from "next/link";
 import ThemeToggleButton from "./ThemeToggleButton";
 
 const LinkItem = ({ href, target, children, ...props }) => {
   return (
-    <Link as={NextLink} href={href} p={2} target={target} {...props}>
+    <Button as={Link} href={href} p={2} target={target} {...props}>
       {children}
-    </Link>
+    </Button>
   );
 };
 
 const NavBar = () => {
   return (
-    <Box
+    <Flex
       as="nav"
       pt="10px"
       pb="10px"
@@ -20,7 +21,7 @@ const NavBar = () => {
       justifyContent="space-between"
       alignItems="center"
     >
-      <Flex direction="row">
+      <Flex direction="row" gap="10px">
         <LinkItem href="/">Home</LinkItem>
         <LinkItem href="/works">Works</LinkItem>
         <LinkItem href="https://github.com/oasi911/homepage" target="_blank">
@@ -28,7 +29,7 @@ const NavBar = () => {
         </LinkItem>
       </Flex>
       <ThemeToggleButton />
-    </Box>
+    </Flex>
   );
 };
 
