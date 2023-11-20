@@ -1,7 +1,7 @@
 import Main from "@/components/layout/Main";
-import { Flex, Heading, VStack, Text, Box } from "@chakra-ui/layout";
+import { Flex, Heading, VStack, HStack, Text, Box } from "@chakra-ui/layout";
 import { Image } from "@chakra-ui/image";
-import { Divider } from "@chakra-ui/react";
+import { Divider, Link } from "@chakra-ui/react";
 import Photo from "@/components/Photo";
 import {
   HtmlIcon,
@@ -14,6 +14,11 @@ import {
   ChakraIcon,
 } from "@/components/icons/TechStack";
 import { BioSection, BioYear } from "@/components/Bio";
+import {
+  EmailIcon,
+  LinkedinIcon,
+  TelegramIcon,
+} from "@/components/icons/Contacts";
 
 export default function Home() {
   return (
@@ -138,6 +143,36 @@ export default function Home() {
         </Flex>
 
         <Divider />
+
+        <Flex
+          as="section"
+          gap={{ base: "15px", md: "25px" }}
+          my="50px"
+          direction="column"
+        >
+          <Heading fontSize="xl" m="auto">
+            Contacts
+          </Heading>
+          <HStack>
+            <EmailIcon boxSize="30px" />
+            <Text>sokolchukwork@gmail.com</Text>
+          </HStack>
+          <HStack>
+            <LinkedinIcon boxSize="30px" />
+            <Link
+              href="https://www.linkedin.com/in/antonsokolchuk/"
+              target="_blank"
+            >
+              LinkedIn
+            </Link>
+          </HStack>
+          <HStack>
+            <TelegramIcon boxSize="30px" />
+            <Link href="https://t.me/loremipsumyoda" target="_blank">
+              Telegram
+            </Link>
+          </HStack>
+        </Flex>
       </Box>
     </Main>
   );
