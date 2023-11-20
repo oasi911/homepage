@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Container } from "@chakra-ui/layout";
 import NavBar from "@/components/NavBar";
+import Footer from "../Footer";
 
 const Main = ({ children, title }) => {
   const t = `${title} - Anton Sokolchuk`;
@@ -15,6 +16,7 @@ const Main = ({ children, title }) => {
       <Container maxW="container.lg">
         <NavBar />
         {children}
+        <Footer />
       </Container>
     </>
   );

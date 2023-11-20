@@ -153,11 +153,11 @@ export default function Home() {
           <Heading fontSize="xl" m="auto">
             Contacts
           </Heading>
-          <HStack>
+          <HStack spacing={{ base: "10px", lg: "20px" }}>
             <EmailIcon boxSize="30px" />
             <Text>sokolchukwork@gmail.com</Text>
           </HStack>
-          <HStack>
+          <HStack spacing={{ base: "10px", lg: "20px" }}>
             <LinkedinIcon boxSize="30px" />
             <Link
               href="https://www.linkedin.com/in/antonsokolchuk/"
@@ -166,7 +166,7 @@ export default function Home() {
               LinkedIn
             </Link>
           </HStack>
-          <HStack>
+          <HStack spacing={{ base: "10px", lg: "20px" }}>
             <TelegramIcon boxSize="30px" />
             <Link href="https://t.me/loremipsumyoda" target="_blank">
               Telegram
