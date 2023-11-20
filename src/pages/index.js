@@ -13,6 +13,7 @@ import {
   SassIcon,
   ChakraIcon,
 } from "@/components/icons/TechStack";
+import { BioSection, BioYear } from "@/components/Bio";
 
 export default function Home() {
   return (
@@ -104,6 +105,36 @@ export default function Home() {
             player who thrives in collaborating with cross-functional teams to
             produce outstanding web applications.
           </Text>
+        </Flex>
+
+        <Divider />
+
+        <Flex
+          as="section"
+          gap={{ base: "15px", md: "25px" }}
+          my="50px"
+          direction="column"
+        >
+          <Heading fontSize="xl" m="auto">
+            Bio
+          </Heading>
+          <BioSection>
+            <BioYear>1998</BioYear>
+            Born in Dnipro, Ukraine.
+          </BioSection>
+          <BioSection>
+            <BioYear>2019</BioYear>
+            Completed the Bachelor&apos;s Program of Computer Science at Dnipro
+            University of Technology.
+          </BioSection>
+          <BioSection>
+            <BioYear>2023</BioYear>
+            Completed Full Stack Developer courses at GOIT.
+          </BioSection>
+          <BioSection>
+            <BioYear>2023 to present</BioYear>
+            Looking for a job.
+          </BioSection>
         </Flex>
 
         <Divider />
