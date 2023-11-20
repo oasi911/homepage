@@ -86,6 +86,27 @@ export default function Home() {
         </Flex>
 
         <Divider />
+
+        <Flex
+          as="section"
+          textAlign="center"
+          gap={{ base: "15px", md: "25px" }}
+          my="50px"
+          direction="column"
+        >
+          <Heading fontSize="xl">About me</Heading>
+          <Text>
+            I am a highly motivated individual with a strong passion for coding
+            and web development. My strengths lie in my ability to quickly learn
+            new technologies and apply them to projects in an efficient and
+            effective manner. I am a problem-solver by nature and enjoy tackling
+            complex challenges to find elegant solutions. I am also a team
+            player who thrives in collaborating with cross-functional teams to
+            produce outstanding web applications.
+          </Text>
+        </Flex>
+
+        <Divider />
       </Box>
     </Main>
   );
